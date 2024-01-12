@@ -9,7 +9,11 @@ class SubArrayWithSum {
     public static void sum(int a[], int s) {
         int count = 0;
         for (int i = 0; i < a.length; i++) {
-            count = a[i];
+                count = a[i];
+             if (count == s) {
+                System.out.println("Sum found at index " + i);
+                return;
+            
             for (int j = i + 1; j < a.length; j++) {
 
                 count = count + a[j];
